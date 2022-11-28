@@ -7,11 +7,11 @@ Use composer to manage your dependencies and download LARAVEL-JWT:
 
 composer require tungltdev/laravel-php-jwt
 
-Tungltdev\JWT\JwtAuthTokenProvider::class  add to config/app.php
+Tungltdev\LARAVEL\JWT\JwtAuthTokenProvider::class  add to config/app.php
 
-php artisan vendor:publish --provider="Tungltdev\JWT\JwtAuthTokenProvider"
+php artisan vendor:publish --provider="Tungltdev\LARAVEL\JWT\JwtAuthTokenProvider"
 hoặc
-php artisan vendor:publish --provider="Tungltdev\JWT\JwtAuthTokenProvider" --force
+php artisan vendor:publish --provider="Tungltdev\LARAVEL\JWT\JwtAuthTokenProvider" --force
 
 ```
 config key in file config/jwt.php
