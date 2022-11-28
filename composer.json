@@ -22,5 +22,12 @@
         "psr-4": {
             "Tungltdev\\LARAVEL\\JWT\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tungltdev\\LARAVEL\\JWT\\JwtAuthTokenProvider"
+            ]
+        }
     }
 }
