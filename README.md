@@ -5,7 +5,7 @@ Use composer to manage your dependencies and download LARAVEL-JWT:
 
 ```bash
 
-composer require tungltdev/laravel-jwt
+composer require tungltdev/laravel-php-jwt
 
 Tungltdev\JWT\JwtAuthTokenProvider::class  add to config/app.php
 
@@ -56,8 +56,8 @@ $payload  = array(
  * https://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms-40
  * for a list of spec-compliant algorithms.
  */
-$jwt = jwtencode($payload); 
-$decoded = jwtdecode($jwt, array('HS256'));
+$jwt = jwtEncode($payload); 
+$decoded = jwtDecode($jwt, array('HS256'));
 
 print_r($decoded);
 
@@ -75,8 +75,8 @@ $decoded_array = (array) $decoded;
  *
  * Source: http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html#nbfDef
  */
-jwtencode(60); // $leeway in seconds
-$decoded = jwtdecode($jwt, array('HS256'));
+jwtEncode(60); // $leeway in seconds
+$decoded = jwtDecode($jwt, array('HS256'));
 
 ?>
 ```
@@ -152,10 +152,10 @@ $payload = array(
     "nbf" => 1357000000
 );
 
-$jwt = jwtencode($payload, 'RS256', $privateKey);
+$jwt = jwtEncode($payload, 'RS256', $privateKey);
 echo "Encode:\n" . print_r($jwt, true) . "\n";
 
-$decoded = jwtdecode($jwt, array('RS256'), $publicKey);
+$decoded = jwtDecode($jwt, array('RS256'), $publicKey);
 
 /*
  NOTE: This will now be an object instead of an associative array. To get

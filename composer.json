@@ -1,6 +1,6 @@
 {
     "name": "tungltdev/laravel-php-jwt",
-    "version": "1.0",
+    "version": "2.0",
     "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP.",
     "homepage": "https://github.com/tungltdev/laravel-php-jwt",
     "authors": [
@@ -13,7 +13,7 @@
     "license": "MIT",
     "require": {
         "php": ">=5.6.0",
-        "firebase/php-jwt": "^6.1"
+        "firebase/php-jwt": "^6.3"
     },
     "autoload": {
         "files": [
