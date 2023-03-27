@@ -57,7 +57,7 @@ $payload  = array(
  * for a list of spec-compliant algorithms.
  */
 $jwt = jwtEncode($payload); 
-$decoded = jwtDecode($jwt, array('HS256'));
+$decoded = jwtDecode($jwt, 'HS256');
 
 print_r($decoded);
 
@@ -76,7 +76,7 @@ $decoded_array = (array) $decoded;
  * Source: http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html#nbfDef
  */
 jwtEncode(60); // $leeway in seconds
-$decoded = jwtDecode($jwt, array('HS256'));
+$decoded = jwtDecode($jwt, 'HS256');
 
 ?>
 ```
@@ -155,7 +155,7 @@ $payload = array(
 $jwt = jwtEncode($payload, 'RS256', $privateKey);
 echo "Encode:\n" . print_r($jwt, true) . "\n";
 
-$decoded = jwtDecode($jwt, array('RS256'), $publicKey);
+$decoded = jwtDecode($jwt, 'RS256', $publicKey);
 
 /*
  NOTE: This will now be an object instead of an associative array. To get
