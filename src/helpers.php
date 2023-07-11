@@ -5,7 +5,7 @@ use Tungltdev\LARAVEL\JWT\JWT;
 
 if (!function_exists('jwtDecode')) {
 
-    function jwtDecode(string $jwt, string $allowed_alg = 'HS256', string $key = null)
+    function jwtDecode($jwt, $allowed_alg = 'HS256', $key = null)
     {
         if (empty($key)) {
             $key = config('jwt.secret');
@@ -16,7 +16,7 @@ if (!function_exists('jwtDecode')) {
 }
 if (!function_exists('jwtEncode')) {
 
-    function jwtEncode($payload, string $allowed_alg = 'HS256', $key = null, $keyId = null, $head = null)
+    function jwtEncode($payload, $allowed_alg = 'HS256', $key = null, $keyId = null, $head = null)
     {
         if (empty($key)) {
             $key = config('jwt.secret');
